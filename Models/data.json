@@ -1,0 +1,14 @@
+{
+    "tileCollection": [
+      {
+        "type": "Create",
+        "icon": "sap-icon://travel-request",
+        "title": "Pesquisa",
+        "info": "Respostas são requeridas"
+      },
+      {
+        "icon": "sap-icon://settings",
+        "title": "Configuração"
+      }
+    ]
+  }

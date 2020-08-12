@@ -1,0 +1,28 @@
+<mvc:View
+    controllerName = "SIMAS.Controller.Pesquisas.PesquisaResposta"
+    xmlns:form="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	xmlns:u="sap.ui.unified"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+    height="100%">
+
+    <NavContainer id="wizardNavContainer">
+			<pages>
+				<Page
+				id="wizardContentPage"
+				showHeader="false">
+					<content>
+						
+					</content>
+					<footer>
+						<OverflowToolbar>
+							<ToolbarSpacer/>
+							<Button text="{i18n>Label.Back}" press="aoVoltar"/>
+						</OverflowToolbar>
+					</footer>
+				</Page>
+			</pages>
+		</NavContainer>
+
+</mvc:View>

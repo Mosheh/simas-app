@@ -1,0 +1,55 @@
+<mvc:View
+    controllerName="SIMAS.Controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout"
+    displayBlock="true"
+	xmlns:tnt="sap.tnt">
+    <Shell>
+    <App class="myApp"  id="simas-app" >
+        <pages>
+            <Page title="{i18n>Label.Title}">
+            <headerContent>					
+				<MenuButton icon="sap-icon://account" type="Transparent">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow" />
+					</layoutData>
+					<Menu>
+						<MenuItem text="{i18n>Label.NewLogin}" press="aoFazerNovoLogin" />						
+					</Menu>
+				</MenuButton>
+
+				<Button
+							id = "btnOpcoesLogin"
+							icon="sap-icon://action-settings"
+							press="aoAbrirConfiguracao"/>
+			</headerContent>
+                <content>
+                    <mvc:XMLView viewName="SIMAS.View.Panel"/> 
+
+					<FlexBox alignItems="Center" alignContent="Center"   wrap="Wrap"  items="{/TileCollection}">
+					<items>
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{Title}" subheader="{Info}" frameType="TwoByOne"  press="onTilePress">
+							<TileContent>
+							<ImageContent src="{Icon}" />
+							</TileContent>
+						</GenericTile>
+					</items>
+					
+					</FlexBox>	
+
+                </content> 				
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+					<Button text="{i18n>Label.Edit}" press="handleEditPress" />					
+				<ToolbarSpacer/>
+			</Toolbar>
+		</footer>
+
+
+            </Page>
+        </pages>
+    </App>
+    </Shell>
+</mvc:View>

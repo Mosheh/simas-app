@@ -1,0 +1,57 @@
+<mvc:View 
+controllerName = "SIMAS.Controller.Configuracoes.Configuracao"
+height = "100%"
+xmlns:mvc = "sap.ui.core.mvc"
+xmlns="sap.m"
+xmlns:l="sap.ui.layout"
+xmlns:f="sap.ui.layout.form"
+xmlns:core="sap.ui.core">
+    <Page title="{i18n>Label.Settings}" showNavButton="true" navButtonPress=".aoVoltar">
+   
+        <TabContainer id="tabConfiguracao"
+            showAddNewButton="false"            
+            class="sapUiSmallMargin">
+            <items>
+                <TabContainerItem name="{i18n>Label.General}" icon="sap-icon://action-settings">
+                    <content>                       
+                        <f:SimpleForm id="simpleFormConfigGeral"
+                            editable="true"
+                            layout="ResponsiveGridLayout"
+                            title="{i18n>Label.Options}"
+                            labelSpanXL="3"
+                            labelSpanL="3"
+                            labelSpanM="3"
+                            labelSpanS="12"
+                            adjustLabelSpan="false"
+                            emptySpanXL="4"
+                            emptySpanL="2"
+                            emptySpanM="4"
+                            emptySpanS="0"
+                            columnsXL="1"
+                            columnsL="1"
+                            columnsM="1"
+                            singleContainerFullSize="true" >
+                            
+                                <Label text="{i18n>Label.DefaultUserName}" />
+                                <Input id="inputUsuarioNomePadrao"/>
+                                <Label text="{i18n>Label.DefaultUserPassword}" />
+                                <Input id="inputUsuarioSenhaPadrao" type="Password">
+                                </Input>				
+                                <CheckBox id="checkBoxRequererNovaPesquisa" text="{i18n>Label.RequiredSurveyAuto}" />
+                                <CheckBox id="checkLoginAutomatico" text="{i18n>Label.AutoLogin}" />
+                                                        
+                    </f:SimpleForm>
+                    </content>
+                </TabContainerItem>
+            </items>
+        </TabContainer>
+
+       <footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button type="Accept" text="{i18n>Label.Save}" press="aoSalvarConfiguracao"/>
+				<Button type="Reject" text="{i18n>Label.Cancel}"  press=".aoVoltar" />
+			</OverflowToolbar>
+		</footer>
+    </Page>
+</mvc:View>

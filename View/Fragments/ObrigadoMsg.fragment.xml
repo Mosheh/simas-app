@@ -1,0 +1,23 @@
+<core:FragmentDefinition		
+    height="100%"    	
+    xmlns:l="sap.ui.layout"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+  <Page id="viewObrigadoMsg" showHeader="false">  
+			<content>
+					<FlexBox
+					height="100px"
+					alignItems="Center"
+					justifyContent="Center">
+						<Text text="{i18n>Message.ThankYouForYourTime}!" class="superText" />
+				</FlexBox>
+			</content>
+			<footer>
+				<Bar>
+					<contentRight>
+						<Button id="btnResponderNovamente"  text="{legendaBotaoResponder>TextoBotaoResponder}" press="aoResponderNovamente"/>						
+					</contentRight>
+				</Bar>
+			</footer>
+		</Page>
+</core:FragmentDefinition>

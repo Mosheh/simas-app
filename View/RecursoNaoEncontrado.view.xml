@@ -1,0 +1,31 @@
+<mvc:View   
+   controllerName="SIMAS.Controller.RecursoNaoEncontrado"
+   xmlns:l="sap.ui.layout"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+  	<Page
+		id="floatingFooterPage"
+		title="{i18n>Label.Title}"
+		floatingFooter="true"
+		class="sapUiResponsivePadding--header sapUiResponsivePadding--content sapUiResponsivePadding--footer sapUiResponsivePadding--floatingFooter">
+       
+       	<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+		<headerToolbar>
+			<OverflowToolbar>
+				<Title text="{i18n>Message.InvalidUrl}"/>
+			</OverflowToolbar>
+		</headerToolbar>
+		<content>			
+			<Text text="{i18n>Message.NotFound}" />
+		</content>
+	</Panel>
+
+
+		<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button type="Accept" text="{i18n>Label.Home}" press=".voltarParaPaginaPrincipal"/>				
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

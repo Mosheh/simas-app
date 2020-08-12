@@ -1,0 +1,17 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <SelectDialog
+        title="{i18n>Label.Institutions}"
+        class="sapUiPopupWithPadding"
+        items="{instituicoes>/}"
+        search="aoPesquisarInstituicaoNome"
+        confirm="aoSelecionarInstituicao"
+        cancel = "aoSelecionarInstituicao">
+        <StandardListItem
+            title="{instituicoes>Nome}"
+            description="{instituicoes>NomeFantasia}"
+            info="{instituicoes>Id}"
+            />
+    </SelectDialog>
+</core:FragmentDefinition>    

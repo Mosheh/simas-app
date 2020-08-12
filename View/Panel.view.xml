@@ -1,0 +1,21 @@
+<mvc:View
+   controllerName="SIMAS.Controller.Panel"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <!-- <Panel
+      headerText="{i18n>Label.Panel}"
+      class="sapUiResponsiveMargin"
+      width="auto" >
+      <content>
+         <Button         
+            text="{i18n>Label.OK}"
+            press=".onShowHello"
+            class="myApp myCustomButton"/>
+                  
+        <Button         
+            text="{i18n>Label.Message}"
+            press=".onOpenDialog"
+            class="myApp myCustomButton"/>                  
+      </content>
+   </Panel> -->
+</mvc:View>

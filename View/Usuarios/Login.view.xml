@@ -1,0 +1,26 @@
+<mvc:View
+    controllerName="SIMAS.Controller.Usuarios.Login"
+    xmlns:l="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    height="100%">
+    <Page class="login" backgroundDesign="Transparent"  showHeader="false" id="SIMASLoginView">
+        <content>              
+            <VBox fitContainer="true" justifyContent="Center" alignItems="Center" alignContent="Center">
+                    <Image src="img/login.jpg"  width="12rem"  />
+                <Panel>
+                    <Input 
+                        id="usuarioInput"
+                        type="Text"
+                        placeholder="{i18n>Label.UserName}" submit="aoLogar"/>            
+                    <Input 
+                        id="senhaInput"
+                        type="Password"
+                        placeholder="{i18n>Message.EnterPassword}"  submit="aoLogar" />
+                </Panel>
+                <Button id="buttonLogin"  width="12rem"  text="Entrar" press="aoLogar"/>
+            </VBox>                    
+        </content>
+    </Page>
+    
+</mvc:View>

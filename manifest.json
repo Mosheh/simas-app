@@ -1,0 +1,119 @@
+{
+    "_version": "1.12.0",
+    "sap.app": {
+      "id": "SIMAS",
+      "type": "application",
+      "i18n": "i18n/i18n.properties",
+      "title": "{{Label.Title}}",
+      "description": "{{Label.AppDescription}}",
+      "applicationVersion": {
+        "version": "1.0.0"
+      }
+    },
+    "sap.ui": {
+      "technology": "UI5",
+      "deviceTypes": {
+          "desktop": true,
+          "tablet": true,
+          "phone": true
+      }
+    },
+    "sap.ui5": {
+      "rootView": {
+          "viewName": "SIMAS.View.App",
+          "type": "XML",
+          "async": true,
+          "id": "simas-app"
+      },
+      "config": {
+        "localData": "models",
+        "serviceUrl": "https://simas.azurewebsites.net/"
+      },
+      "dependencies": {
+        "minUI5Version": "1.60",
+        "libs": {
+          "sap.m": {}
+        }
+      },
+      "models": {
+        "i18n": {
+          "type": "sap.ui.model.resource.ResourceModel",
+          "settings": {
+            "bundleName": "SIMAS.i18n.i18n"
+          }
+        }
+      },
+      "routing": {
+        "config": {
+          "routerClass": "sap.m.routing.Router",
+          "viewType": "XML",
+          "viewPath": "SIMAS.View",
+          "controlId": "simas-app",
+          "controlAggregation": "pages",
+          "async": true  ,
+          "bypassed": {"target": "RecursoNaoEncontrado"}        
+        },
+        "routes": [
+          {
+            "pattern": "",
+            "name": "Login",
+            "target": "Login"
+          },
+          {
+            "pattern": "App",
+            "name": "App",
+            "target": "App"
+          },
+          {
+            "pattern": "PesquisaLista",
+            "name": "PesquisaLista",
+            "target": "PesquisaLista"
+          },
+          {
+            "pattern": "PesquisaResposta/{pesquisaId}",
+            "name": "PesquisaResposta",
+            "target": "PesquisaResposta"
+          },
+          {
+            "pattern": "Configuracao",
+            "name": "Configuracao",
+            "target": "Configuracao"
+          }
+        ],
+        "targets": {
+          "App":{            
+            "viewName": "App"
+          },
+          "Login":{            
+            "viewName": "Usuarios.Login"
+          },
+          "PesquisaLista":{            
+            "viewName": "Pesquisas.PesquisaLista"
+          },
+          "PesquisaResposta":{            
+            "viewName": "Pesquisas.PesquisaResposta"
+          },
+
+          "Configuracao":{            
+            "viewName": "Configuracoes.Configuracao"
+          },
+
+          "RecursoNaoEncontrado":{            
+            "viewName": "RecursoNaoEncontrado"
+          }
+        }
+      },
+      "resources": {
+          "js": [
+              {
+                  "uri": "component.js"
+              }
+          ],
+          "css": [
+              {
+                  "uri": "css/style.css"                  
+              }
+          ]
+      }
+    }
+  }
