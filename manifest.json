@@ -27,7 +27,7 @@
       },
       "config": {
         "localData": "models",
-        "serviceUrl": "https://simas.azurewebsites.net/"
+        "serviceUrl": "https://simas.azurewebsites.net"
       },
       "dependencies": {
         "minUI5Version": "1.60",
